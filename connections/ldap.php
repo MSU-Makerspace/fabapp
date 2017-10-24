@@ -8,10 +8,10 @@
 
 //local function for testing & bypass
 function AuthenticateUser($netid, $password) {
-    $attribute = '';
-    $ldap_server = '';
-    $ldap_baseDN = '';
-    $ldap_bindDN = "";
+    $attribute = 'utaEmplID';
+    $ldap_server = 'ldaps://ldap.cedar.uta.edu';
+    $ldap_baseDN = 'cn=accounts,dc=uta,dc=edu';
+    $ldap_bindDN = "uid=$netid,cn=accounts,dc=uta,dc=edu";
     
     //switch case to return roles
     switch ($netid){
